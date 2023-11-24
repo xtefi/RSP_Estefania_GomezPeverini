@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body class="body">
+    <div class="d-flex justify-content-center">
+        <span id="spinner" class="t-center"></span>
+    </div>
+    <!-- FILTRO LISTA -->
+<div id="general">
+    <div id="divLista">
+        <label id="labelLista"> Filtrar por:    </label>
+        <select name="lista" id="lista">
+            <option value="todos"> Todos</option>
+            <option value="aereos">Aereos</option>
+            <option value="terrestres">Terrestres</option>
+        </select>
+
+    <!-- CHECKBOXES -->
+    </div>
+    <br>
+    <div class="rowCbx">
+        <div class="colCbx">
+            <input type="checkbox" id="cbxId" checked="true">
+            <label>ID</label>
+            <br>
+            <input type="checkbox" id="cbxModelo" checked="true">
+            <label>Modelo</label>
+            <br>
+            <input type="checkbox" id="cbxAnoFab" checked="true">
+            <label>AnoFab</label>
+            <br>
+            <input type="checkbox" id="cbxVelMax" checked="true">
+            <label>VelMax</label>                
+        </div>
+        <div class="colCbx">
+            <input type="checkbox" id="cbxAltMax" checked="true">
+            <label>AltMax</label>
+            <br>
+            <input type="checkbox" id="cbxAutonomia" checked="true">
+            <label>Autonomia</label>
+            <br>
+            <input type="checkbox" id="cbxCantPue" checked="true">
+            <label>CantPue</label>
+            <br>
+            <input type="checkbox" id="cbxCantRue" checked="true">
+            <label>CantRue</label>
+        </div>
+    </div>
+    <br>
+    <!-- TABLA -->
+    <div id="divTabla">
+        <table class="tablaDatos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Modelo</th>
+                    <th>Año fabricación</th>
+                    <th>Velocidad Máxima</th>
+                    <th>Altura Máxima</th>
+                    <th>Autonomía</th>
+                    <th>Cantidad de Puertas</th>
+                    <th>Cantidad de Ruedas</th>
+                </tr>
+            </thead>
+        </table>
+        <input type="button" value="Eliminar" id="btnEliminar">  
+    </div>
+
+    <div>
+        <input type="button" value="Agregar" id="btnAgregar">
+    </div>
+    <br>
+</div>
+    <dialog id="dialogForm">
+        <form>
+            <br><br>
+            <div class="formulario">
+                <label>ID:</label>
+                <input class="formABM" type="text" id= "id" name="id" placeholder="ID" readonly="readonly">
+                <br>
+                <label>Modelo:</label>
+                <input class="formABM" type="text" id="modelo" name="modelo" placeholder="Modelo">
+                <br>
+                <label>Año fabricación:</label>
+                <input class="formABM" type="number" id="anoFab" name="anoFab" placeholder="Año Fabricacion">
+                <br>
+                <label>Velocidad maxima:</label>
+                <input class="formABM" type="number" id="velMax" name="velMax" placeholder="Velocidad Maxima">
+                <br><br>
+                <select name="listaABM" id="listaABM">
+                    <option value="vehiculos">Vehiculos</option>
+                    <option value="aereos">Aereos</option>
+                    <option value="terrestres">Terrestres</option>
+                </select>
+                <br>
+                <label>Altura maxima:</label>
+                <input class="formABM" type="number" id="altMax" name="altMax" placeholder="Altura Maxima">
+                <br>
+                <label>Autonomía:</label>
+                <input class="formABM" type="number" id="autonomia" name="autonomia" placeholder="Autonomia">
+                <br>
+                <label>Cantidad puertas:</label>
+                <input class="formABM" type="number" id="cantPue" name="cantPue" placeholder="Cantidad Puertas" >
+                <br>
+                <label>Cantidad ruedas:</label>
+                <input class="formABM" type="number" id="cantRue" name="cantRue" placeholder="Cantidad Ruedas">
+            </div>
+        </form>
+        <div>
+            <br>                
+            <input type="button" value="Aceptar" id="btnAceptar">
+            <input type="button" value="Cancelar" id="bntCancelar">  
+        </div>
+    </dialog>
+
+</body>
+</html>
